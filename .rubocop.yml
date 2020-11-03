@@ -1,0 +1,32 @@
+require:
+  - rubocop-performance # Performance optimization analysis
+  - rubocop-rails # Rails-specific analysis
+
+AllCops:
+  TargetRubyVersion: 2.5
+  NewCops: enable
+  Exclude:
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+
+# We have a readme instead
+Style/Documentation:
+  Enabled: false
+
+# We like our specs to use the {} syntax
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - 'spec/**/*.rb'
+
+# Well, lower would probably be better but it doesn't improve the readability of this gem
+Metrics/MethodLength:
+  Max: 15
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb' # Specs just have large blocks
+    - '*.gemspec'    # Is just one block
+
+# This is intentional and covered by the specs
+Rails/SquishedSQLHeredocs:
+  Enabled: false

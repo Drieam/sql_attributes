@@ -1,0 +1,3 @@
+runner:
+  rubocop:
+    cmd: bundle exec rubocop

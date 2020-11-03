@@ -1,0 +1,3 @@
+test:
+  adapter:  sqlite3
+  database: db/sql_attributes_test.sqlite3
