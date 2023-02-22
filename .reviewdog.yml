@@ -1,3 +1,6 @@
 runner:
   rubocop:
     cmd: bundle exec rubocop
+
+  brakeman:
+    cmd: bundle exec brakeman --quiet --format tabs --force-scan
