@@ -36,4 +36,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rubocop-performance'            # Linter for Performance optimization analysis
   spec.add_development_dependency 'rubocop-rails'                  # Linter for Rails-specific analysis
   spec.add_development_dependency 'sqlite3'                        # Database adapter
+  spec.metadata['rubygems_mfa_required'] = 'true'
 end

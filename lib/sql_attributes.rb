@@ -6,13 +6,13 @@ module SqlAttributes
   class NotDefined < StandardError; end
 
   def sql_attributes
-    @sql_attributes ||= HashWithIndifferentAccess.new
+    @sql_attributes ||= ActiveSupport::HashWithIndifferentAccess.new
   end
 
   def with_sql_attributes(*attributes)
     requested_attributes =
       if attributes.length.positive?
-        Array.wrap(attributes).flatten.reject(&:nil?)
+        Array.wrap(attributes).flatten.compact
       else
         sql_attributes.keys
       end

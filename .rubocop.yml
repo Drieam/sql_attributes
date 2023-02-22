@@ -31,3 +31,7 @@ Metrics/BlockLength:
 # This is intentional and covered by the specs
 Rails/SquishedSQLHeredocs:
   Enabled: false
+
+# We specify development gems in the gemspec file
+Gemspec/DevelopmentDependencies:
+  Enabled: false
