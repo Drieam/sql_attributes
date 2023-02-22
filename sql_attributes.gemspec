@@ -26,6 +26,8 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'activerecord', '>= 6.0.3'                   # Depend on activerecord as ORM
 
+  spec.add_development_dependency 'appraisal'                      # Test against multiple gem versions
+  spec.add_development_dependency 'brakeman'
   spec.add_development_dependency 'combustion'                     # Test rails engines
   spec.add_development_dependency 'database_cleaner-active_record' # Ensure clean state for testing
   spec.add_development_dependency 'rspec-github'                   # RSpec formatter for GitHub Actions
@@ -34,4 +36,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rubocop-performance'            # Linter for Performance optimization analysis
   spec.add_development_dependency 'rubocop-rails'                  # Linter for Rails-specific analysis
   spec.add_development_dependency 'sqlite3'                        # Database adapter
+  spec.metadata['rubygems_mfa_required'] = 'true'
 end
