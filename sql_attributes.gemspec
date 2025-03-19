@@ -17,14 +17,14 @@ Gem::Specification.new do |spec|
   MESSAGE
   spec.description = spec.summary
   spec.license     = 'MIT'
-  spec.required_ruby_version = Gem::Requirement.new('>= 2.5.0')
+  spec.required_ruby_version = Gem::Requirement.new('>= 3.2')
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = 'https://github.com/Drieam/sql_attributes'
 
   spec.files = Dir['lib/**/*', 'LICENSE', 'README.md']
 
-  spec.add_dependency 'activerecord', '>= 6.0.3'                   # Depend on activerecord as ORM
+  spec.add_dependency 'activerecord', '>= 7.1', '< 9'              # Depend on activerecord as ORM
 
   spec.add_development_dependency 'appraisal'                      # Test against multiple gem versions
   spec.add_development_dependency 'brakeman'
