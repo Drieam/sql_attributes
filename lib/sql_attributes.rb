@@ -22,14 +22,14 @@ module SqlAttributes
         raise NotDefined, "You want to load dynamic SQL attribute `#{name}` but it is not defined."
       end
 
-      scope.public_send("with_#{name}")
+      scope.public_send(:"with_#{name}")
     end
   end
 
   def sql_attribute(name, subquery)
     sql_attributes[name] = subquery.squish
 
-    scope "with_#{name}".to_sym, lambda {
+    scope :"with_#{name}", lambda {
       select(
         arel.projections,
         "(#{subquery.squish}) as #{name}"
